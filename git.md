@@ -1,9 +1,9 @@
 ## 本地初始化仓库
 
 ```git
-$ mkdir demo									#在本地创建文件夹用作仓库
-$ cd demo									#进入文件夹
-$ git init									#文件夹初始化为本地仓库
+$ mkdir demo									# 在本地创建文件夹用作仓库
+$ cd demo										# 进入文件夹
+$ git init										# 文件夹初始化为本地仓库
 ```
 
 
@@ -11,17 +11,17 @@ $ git init									#文件夹初始化为本地仓库
 ## 获取远程仓库
 
 ```git
-$ git clone	<版本库网址> <本地目录名>		 	  		# 本地目录名为可选项，支持HTTP(s)、SSH、Git、本地文件协议
+$ git clone	<版本库网址> <本地目录名>		 	  # 本地目录名为可选项，支持HTTP(s)、SSH、Git、本地文件协议
 
 $ git pull [<options>] [<repository> [<refspec>…​]]
 	<repository>							# 仓库名字
-	<refspec>							# 分支名字
+	<refspec>								# 分支名字
 	origin master							# 拉取远程服务器origin的master分支
 
 $ git remote -v								# 查看当前仓库的远端地址，从下方看到是 https格式的
-$ git remote add <远端仓库别名> <url>					   # 使用add添加新的仓库地址
-$ git remote rm <仓库名>					  	      # 删除名字为<仓库名>的远端地址
-$ git remote rename <仓库名> <修改名>					   # 把<仓库名>修改为<修改名>
+$ git remote add origin <url>			# 使用add添加新的仓库地址
+$ git remote rm <仓库名>					  # 删除名字为<仓库名>的远端地址
+$ git remote rename <仓库名> <修改名>			# 把<仓库名>修改为<修改名>
 ```
 
 
@@ -29,18 +29,18 @@ $ git remote rename <仓库名> <修改名>					   # 把<仓库名>修改为<修
 ## 添加文件或者文件夹
 
 ```git
-$ dir                                           	# 查看有哪些文件夹
+$ dir                                           # 查看有哪些文件夹
 
-$ mkdir test						# 直接创建test文件夹
+$ mkdir test									# 直接创建test文件夹
 $ echo "testing" > 1.txt		              	# 添加文本到1.txt
-$ git add 2.txt					        # 本地添加文件后使用add命令添加文件
-$ touch 3.txt					        # 直接使用touch命令新建文件
+$ git add 2.txt					              	# 本地添加文件后使用add命令添加文件
+$ touch 3.txt					              	# 直接使用touch命令新建文件
 
-$ git add .						# 需要把修改添加到追踪
-$ git commit -m '删除了target'        		      # 提交,添加操作说明
-$ git push -u origin master				# 把本地仓库的修改推送到远程仓库
+$ git add .										# 需要把修改添加到暂存区
+$ git commit -m '删除了target'        				# 提交,添加操作说明
+$ git push -u origin master						# 把本地仓库的修改推送到远程仓库
 
-$ git status						# 查看状态是否还有未提交内容
+$ git status									# 查看状态是否还有未提交内容
 ```
 
 仓库分为工作区、暂存区、提交区，文件夹即是工作区，现在我们新建一个空文件并使用git add <文件名>把它添加到暂存区，随后使用`git commit -m "注释"` 把它提交到版本库
@@ -61,16 +61,20 @@ $ git add -A
 ## 删除文件或者文件夹
 
 ``` git
-$ git pull origin master					# 将远程仓库里面的项目拉下来
-$ git clone git@github.com:名字/库名.git		  	     # 或者克隆远程仓库里面的项目
+$ git pull origin master						# 将远程仓库里面的项目拉下来
+$ git clone git@github.com:名字/库名.git		  # 或者克隆远程仓库里面的项目
 
-$ dir                                           		# 查看有哪些文件夹
+$ dir                                           # 查看有哪些文件夹
 
-$ git rm -r --cached target              			# 删除target文件夹
-$ git rm 1.txt							# 删除1.txt文件
+$ git rm -r --cached target              		# 删除target文件夹
+$ git rm 1.txt									# 删除1.txt文件
+$ git clean -n									# 查看将会删除哪些文件（不会真正删除)
+$ Git clean -f <path>							# 删除当前目录下没有缓存的文件
+$ git clean -df <path>							# 删除当前目录下没有缓存的文件和文件夹
+$ git restet --hard								# 重置到上次commit的记录，后面修改的文件和新增的文件不会被track,配合git clean -df回到上次提交的commit时的内容。
 
-$ git commit -m '删除了target'        			      # 提交,添加操作说明
-$ git push -u origin master					# 把本地仓库的修改推送到远程仓库
+$ git commit -m '删除了target'        			  # 提交,添加操作说明
+$ git push -u origin master						# 把本地仓库的修改推送到远程仓库
 ```
 
 
@@ -78,7 +82,7 @@ $ git push -u origin master					# 把本地仓库的修改推送到远程仓库
 ## 检查状态
 
 ```git
-$ git status							# 查看当前仓库中文件的状态
+$ git status						# 查看当前仓库中文件的状态
 	-s	--short						# 以短格式输出(M-修改,A-添加,D-删除,R-重命名,??-未追踪)
 	-b	--branch					# 以短格式显示分支和跟踪信息
 	--long							# 以长格式输出输出。这是默认设置
@@ -127,17 +131,24 @@ $ git commit -m '
 ## 暂存区
 
 ```git
-#仅仅删除暂存区的文件而已，不会影响工作区的文件
+# 仅仅删除暂存区的文件而已，不会影响工作区的文件
 $ git rm --cache <文件名>						  # 仅仅删除暂存区里的文件
 
-#暂存区和本地文件会一同删除
-$ git rm -f <文件名>						  # 删除暂存区和工作区的文件
-$ git rm -f -r <文件夹名>                         			  # 删除暂存区和工作区的文件夹包括文件夹里的内容
+# 暂存区和本地文件会一同删除
+$ git rm -f <文件名>							  # 删除暂存区和工作区的文件
+$ git rm -f -r <文件夹名>                         # 删除暂存区和工作区的文件夹包括文件夹里的内容
 
-#删除错误提交的commit，需使用git reset
-$ git reset --soft 版本库ID                      			  # 只撤销已提交的版本库，不会修改暂存区和工作区
+# 删除错误提交的commit，需使用git reset
+$ git reset --soft 版本库ID                      # 只撤销已提交的版本库，不会修改暂存区和工作区
 $ git reset --mixed 版本库ID					  # 只撤销已提交的版本库和暂存区，不会修改工作区
-$ git reset --hard 版本库ID		              		  # 将工作区、暂存区和版本库记录恢复到指定的版本库
+$ git reset --hard 版本库ID		              # 将工作区、暂存区和版本库记录恢复到指定的版本库
+
+# 取消暂存(track)
+$ git restore --staged <FileName>
+
+# 加入暂存(track)					
+$ git add .										# 点是全部修改新增文件暂存
+$ git add <FileName>							# 暂存对应文件
 ```
 
 
@@ -145,31 +156,33 @@ $ git reset --hard 版本库ID		              		  # 将工作区、暂存区和�
 ## 分支
 
 ```git
-$ git branch <分支名>					  	# 创建分支
-$ git branch							   # 没有参数时，会列出你在本地的分支
-	--list							   # 如果没有非选项参数，则列出现有分支
-	-r							   # 导致远程追踪分支被列出
-	-a	--all						   # 显示本地和远程分支
-	-d	--delete					   # 删除分支，该分支必须完全合并到其上游分支中
-	-D	--delete --force				   # 快捷键
+$ git branch <分支名>					  # 创建分支
+$ git push origin --delete <BranchName>	# 删除远程分支
+$ git branch							# 没有参数时，会列出你在本地的分支
+	--list								# 如果没有非选项参数，则列出现有分支
+	-r									# 导致远程追踪分支被列出
+	-a	--all							# 显示本地和远程分支
+	-d	--delete						# 删除分支，该分支必须完全合并到其上游分支中
+	-D	--delete --force				# 快捷键
 	
-$ git checkout <分支名>				  		# 切换分支
-	-b							   # 创建新分支并立即切换到该分支下
-$ git checkout -b myRel origin/Release  			   # 本地起名为myRel分支，并切换到本地的myRelase分支
+$ git checkout -b myRel origin/Release  # 本地起名为myRel分支，并切换到本地的myRelase分支
+$ git checkout <分支名>				  # 切换分支
+	-b									# 创建新分支并立即切换到该分支下
 	
-$ git merge							   # 合并分支
+$ git merge								# 合并分支
 
-$ git reset --hard <commit-id>					   # 撤消上一次commit的内容(该操作会彻底回退到某个版本，本地的源码也会变为上一个版本的内容)
+$ git reset --hard <commit-id>			# 撤消上一次commit的内容(该操作会彻底回退到某个版本，本地的源码也会变为上一个版本的内容)
+$ git remote update -p --prune			# 更新远程分支列表
 ```
 
 ```git
-$ git log							   # 按提交时间列出所有的更新
-	-p -2							   # 显示每次提交的内容差异
-	-<n>							   # 显示最近的n次更新
-	--since=2.weeks						   # 列出所有最近两周内的提交
-	--stat							   # 显示简要的增改行数统计
-	--pretty						   # 可以指定使用完全不同于默认格式的方式展示提交历史
-	--pretty=format:					   # 定制格式 format，可以定制要显示的记录格式
+$ git log								# 按提交时间列出所有的更新
+	-p -2								# 显示每次提交的内容差异
+	-<n>								# 显示最近的n次更新
+	--since=2.weeks						# 列出所有最近两周内的提交
+	--stat								# 显示简要的增改行数统计
+	--pretty							# 可以指定使用完全不同于默认格式的方式展示提交历史
+	--pretty=format:					# 定制格式 format，可以定制要显示的记录格式
 ```
 
 | 选项 | 说明                                       |
@@ -192,84 +205,11 @@ $ git log							   # 按提交时间列出所有的更新
 
 
 
-## 常用命令
-
-##### 查看分支
-
-```git
-$ git branch -a			#查看所有本地和远程分支
-$ git branch			#查看本地分支
-$ git branch -r			#查看远程分支
-```
-
-##### 切换分支
-
-```git
-$ git checkout <BranchName>
-```
-
-##### 删除分支
-
-```git
-$ git branch -d <BranchName>				#删除本地分支
-$ git push origin --delete <BranchName>			#删除远程分支
-$ git push origin : <BranchName>
-```
-
-##### 删除文件
-
-```git
-$ git clean -n		#查看将会删除哪些文件（不会真正删除)
-$ Git clean -f		#删除当前目录下没有track过的文件
-$ git clean -df		#删除当前目录下没有track过的文件和文件夹
-$ git restet --hard	#重置到上次commit的记录，后面修改的文件和新增的文件不会被track,配合git clean -df回到上次提交的commit时的内容。
-```
-
-##### 取消暂存（track）
-
-```git
-$ git restore --staged <FileName>
-```
-
-##### 加入暂存
-
-```git
-$ git add .				#点是全部修改新增文件暂存
-$ git add <FileName>			#暂存对应文件
-```
-
-##### 查看当前状态
-
-```git
-$ git status
-```
-
-##### 提交文件到本地
-
-```git
-$ git commit
-```
-
-##### 推送文件到远程
-
-``` git
-$ git push
-```
-
-##### 更新远程分支列表
-
-```git
-$ git remote update --prune
-$ git remote update -p
-```
-
-
-
 ## VIM
 
 ```git
-$ vim test.txt				#打开要编辑的文本
-$ vim +#				#打开文件，并定位到#行
+$ vim test.txt			# 打开要编辑的文本
+$ vim +#				# 打开文件，并定位到#行
 ```
 
 vim 四种模式：
@@ -278,56 +218,56 @@ vim 四种模式：
 ##### 正常模式命令
 
 ```git
-h	#向前一个字符
-l	#向后一个字符
-j	#同位置向下走
-k	#同位置向上走
-n	#查找下一个
-N	#查找上一个
+h	# 向前一个字符
+l	# 向后一个字符
+j	# 同位置向下走
+k	# 同位置向上走
+n	# 查找下一个
+N	# 查找上一个
 这几个命令前加上数字，表示向前多少个字符
 ```
 
 ```git
-:q		#退出编辑
-:wq		#保存并退出
-:q!		#不保存退出
-:w		#保存
-:w!		#强行保存
-:e!		#退回到文件打开后最后一次保存操作的状态
+:q		# 退出编辑
+:wq		# 保存并退出
+:q!		# 不保存退出
+:w		# 保存
+:w!		# 强行保存
+:e!		# 退回到文件打开后最后一次保存操作的状态
 
-w		#移到下一个单词的词首
-e		#跳到当前或下一个单词的词尾
-b		#跳到当前或前一个单词的词首
-#w		#移动#个单词
+w		# 移到下一个单词的词首
+e		# 跳到当前或下一个单词的词尾
+b		# 跳到当前或前一个单词的词首
+#w		# 移动#个单词
 
-gg		#第一行
-G		#最后一行
-#G		#跳到第几行
+gg		# 第一行
+G		# 最后一行
+#G		# 跳到第几行
 
-Ctrl+f		#向下翻一屛
-ctrl+b		#向上翻一屛
-ctrl+d		#向下翻半屛
-ctrl+u		#向上翻半屛
+Ctrl+f	# 向下翻一屛
+ctrl+b	# 向上翻一屛
+ctrl+d	# 向下翻半屛
+ctrl+u	# 向上翻半屛
 
-x		#删除当前光标所在位置的一个字符
-#x		#删除光标所在位置及向后的#个字符
-dd		#删除当前光标所在行
+x		# 删除当前光标所在位置的一个字符
+#x		# 删除光标所在位置及向后的#个字符
+dd		# 删除当前光标所在行
 
-yy		#复制一行
-p		#粘贴,粘贴一行的话，放在当前行的下边。
-u		#撤销操作
+yy		# 复制一行
+p		# 粘贴,粘贴一行的话，放在当前行的下边。
+u		# 撤销操作
 ```
 ##### 切换插入模式
 
 ```
-i			#在光标所在字符前输入，转到输入模式
-a			#在光标所在字符后输入，转到输入模式
-o(字母o)	   	      #在光标所在行的下面单独开一行，并转到输入模式
-s			#删除光标所在的字符，并进入到输入模式
-I(大写i)	   	      #在当前行的行首开始输入文字，并进入输入模式。如果在行首有空格，则在空格后开始插入。
-A		        #在行尾进行输入。进入输入模式
-O(大写O)		      #在当前行的前一行插入空行，并进入输入模式
-S			#删除光标所在的一行，并进入输入模式。
+i			# 在光标所在字符前输入，转到输入模式
+a			# 在光标所在字符后输入，转到输入模式
+o(字母o)	   # 在光标所在行的下面单独开一行，并转到输入模式
+s			# 删除光标所在的字符，并进入到输入模式
+I(大写i)	   # 在当前行的行首开始输入文字，并进入输入模式。如果在行首有空格，则在空格后开始插入。
+A		     # 在行尾进行输入。进入输入模式
+O(大写O)		# 在当前行的前一行插入空行，并进入输入模式
+S			# 删除光标所在的一行，并进入输入模式。
 ```
 
 ##### 切换可视模式
@@ -335,7 +275,7 @@ S			#删除光标所在的一行，并进入输入模式。
 可视模式（就是可以选取一行，或者选取一个区域）：
 
 ```
-v			#进入可视模式，然后使用方向控制就可以进行选取
+v			# 进入可视模式，然后使用方向控制就可以进行选取
 ```
 
 
@@ -343,10 +283,10 @@ v			#进入可视模式，然后使用方向控制就可以进行选取
 ## 文件的移动
 
 ```git
-$ git mv 1.txt lib                	    # 将1.txt移动lib文件夹
+$ git mv 1.txt lib                	# 将1.txt移动lib文件夹
 $ git mv 1.txt ./lib/2.txt		    # 修改文件名并移动到lib
 $ git mv ./lib/2.txt 1.txt 		    # 从lib文件夹移动出来并修改文件名
-$ git mv 1.txt 2.rb			    # 修改文件名和修改文件后缀
+$ git mv 1.txt 2.rb					# 修改文件名和修改文件后缀
 ```
 
 
