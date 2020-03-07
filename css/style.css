@@ -10,7 +10,13 @@
     width: 99%;
 }
 .td-1 {
-    
+    border:5px solid red;
+}
+.td-2 {
+    border:5px solid yellow;
+}
+.td-3 {
+    border:5px solid black;
 }
 #td-1 {
     margin: 10px 0px;
