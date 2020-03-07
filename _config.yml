@@ -1,9 +1,10 @@
+exclude: []
 baseurl: /
   |-- _config.yml
   |-- _layouts
   |   |-- default.html
   |-- git
-  |   |-- index.html
+  |   |-- index.md
   |-- _posts
   |   |-- 2019-03-07-hello-world.html
   |-- index.html
