@@ -1,31 +1,55 @@
----
-layout: default
-title: 主页
----
+<html>
+  <head>
+    <title>主页</title>
+    <style type="text/css">
+    	#container {
+    		display: block;
+	  		text-align: center;
+    	}
+        #header {
+        	
+    	}
+    	#main {
+    		position: absolute;
+    		width: 99%;
+    	}
+    	#footer {
+    		position: absolute;
+    		width: 99%;
+    		text-align: center;
+	  		bottom: 0px;
+    	}
 
+  
+    </style>
+  </head>
+<body>
 
-<div id="container">
-	<div id="header">
-		<h1>Hello</h1>
+	<div id="container">
+		<div id="header">
+			<h1>Hello</h1>
 
-		<p>Vinty</p>
+			<p>Vinty</p>
+		</div>
+
+		<div id="main">
+			<div class="td-1"><a href="/notes/git/">test</a></div> 
+			<br />
+			<div class="td-1"><a href="https://yugchak.github.io/notes/git/">HTM</a></div> 
+
+			<br /><br />
+		</div>
+
+		{% include content-with-indent.html %}
+
+		<div id="footer">
+			<p>footer</p>
+		</div>
 	</div>
 
-	<div id="main">
-		<div class="td-1"><a href="/notes/git/">test</a></div> 
-		<br />
-		<div class="td-1"><a href="https://yugchak.github.io/notes/git/">HTM</a></div> 
+</body>
+</html>
 
-		<br /><br />
-	</div>
-
-	<div id="footer">
-		<p>footer</p>
-	</div>
-</div>
-
-- list
-  {% include content.html %}
 
 
 	
