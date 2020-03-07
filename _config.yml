@@ -1,3 +1,4 @@
 menu:
   home: /
-  git: /git/index.html
+  git: 
+    path: "/git/index.html"
