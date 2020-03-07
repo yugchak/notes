@@ -9,6 +9,18 @@
     position: absolute;
     width: 99%;
 }
+.td-1 {
+    margin: 10px 0px;
+    margin-left: 25%;
+    width: 20%;
+    float: left;
+}
+.td-2 {
+    margin: 10px 0px;
+    margin-right: 25%;
+    width: 20%;
+    float: right;
+}
 #footer {
     position: absolute;
     width: 99%;
