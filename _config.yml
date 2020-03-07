@@ -1,8 +1,6 @@
 
 # Build settings
-markdown: rdiscount
-plugins:
-  - jekyll-feed
+markdown: redcarpet
 exclude:
   - vendor/
   - Gemfile
