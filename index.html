@@ -13,7 +13,7 @@ style: two
 	<div id="main">
 		<div class="td-1"><a href="/notes/git/">test</a></div> 
 		<br />
-		<div class="td-1"><a href="https://yugchak.github.io/notes/git/">HTML</a></div> 
+		<div class="td-1"><a href="https://yugchak.github.io/notes/git/">HTM</a></div> 
 
 		<br /><br />
 	</div>
@@ -23,6 +23,11 @@ style: two
 		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 
 	{% endfor %}
+
+	- list
+	  {% include content.html %}
+	- list
+	  {% include git.md %}
 
 
 </ul>
