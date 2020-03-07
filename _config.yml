@@ -1,5 +1,5 @@
-exclude: []
-baseurl: /notes/
+exclude: [/git/index.md]
+baseurl: /notes
   |-- _config.yml
   |-- _layouts
   |   |-- default.html
