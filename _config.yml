@@ -1,3 +1,9 @@
 
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-feed
+exclude:
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
