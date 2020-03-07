@@ -1,6 +1,6 @@
 
 # Build settings
-markdown: kramdown
+markdown: rdiscount
 plugins:
   - jekyll-feed
 exclude:
