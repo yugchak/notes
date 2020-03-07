@@ -1,4 +1,7 @@
-menu:
-  home: /
-  git: 
-    path: "/git/index.html"
+baseurl: /
+  |-- _config.yml
+  |-- _layouts
+  |   |-- default.html
+  |-- _posts
+  |   |-- 2019-03-07-hello-world.html
+  |-- index.html
