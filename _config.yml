@@ -1,3 +1,7 @@
+sass:
+  sass_dir: ./css/
+  style: style.css
+
 # Build settings
 markdown: redcarpet
 redcarpet:

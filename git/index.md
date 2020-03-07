@@ -1,6 +1,6 @@
 ## 本地初始化仓库
 
-```git
+```md
 $ mkdir demo									# 在本地创建文件夹用作仓库
 $ cd demo										# 进入文件夹
 $ git init										# 文件夹初始化为本地仓库
@@ -10,7 +10,7 @@ $ git init										# 文件夹初始化为本地仓库
 
 ## 获取远程仓库
 
-```git
+```md
 $ git clone	<版本库网址> <本地目录名>		 	  # 本地目录名为可选项，支持HTTP(s)、SSH、Git、本地文件协议
 
 $ git pull [<options>] [<repository> [<refspec>…​]]
@@ -28,7 +28,7 @@ $ git remote rename <仓库名> <修改名>			# 把<仓库名>修改为<修改�
 
 ## 添加文件或者文件夹
 
-```git
+```md
 $ dir                                           # 查看有哪些文件夹
 
 $ mkdir test									# 直接创建test文件夹
@@ -60,7 +60,7 @@ $ git add -A
 
 ## 删除文件或者文件夹
 
-``` git
+```md
 $ git pull origin master						# 将远程仓库里面的项目拉下来
 $ git clone git@github.com:名字/库名.git		  # 或者克隆远程仓库里面的项目
 
@@ -81,7 +81,7 @@ $ git push -u origin master						# 把本地仓库的修改推送到远程仓库
 
 ## 检查状态
 
-```git
+```md
 $ git status						# 查看当前仓库中文件的状态
 	-s	--short						# 以短格式输出(M-修改,A-添加,D-删除,R-重命名,??-未追踪)
 	-b	--branch					# 以短格式显示分支和跟踪信息
@@ -95,26 +95,26 @@ $ git status						# 查看当前仓库中文件的状态
 
 ## 提交修改
 
-```git
+```md
 $ git commit –m "本次提交描述"
 ```
 
 该命令会将`git add .`存入暂存区修改内容提交至本地仓库中，若文件未添加至暂存区，则提交时不会提交任何修改
 
-```git
+```md
 $ git commit –am "本次提交描述"
 $ git commit –a –m "本次提交描述"
 ```
 
 该命令会将本地工作区中修改后，还未使用git add . 命令添加到暂存区中的文件也一并提交上去。相当于`git add -u` 与`git commit –m "本次提交描述"` 两句操作合并为一句进行使用
 
-```git
+```md
 $ git commit –-amend
 ```
 
 `git commit --amend` //也叫追加提交，它可以在不增加一个新的`commit-id`的情况下将新修改的代码追加到前一次的`commit-id`中
 
-```git
+```md
 $ git commit -m '
 > 1.aaaaa
 > 2.bbbb
@@ -130,7 +130,7 @@ $ git commit -m '
 
 ## 暂存区
 
-```git
+```md
 # 仅仅删除暂存区的文件而已，不会影响工作区的文件
 $ git rm --cache <文件名>						  # 仅仅删除暂存区里的文件
 
@@ -155,7 +155,7 @@ $ git add <FileName>							# 暂存对应文件
 
 ## 分支
 
-```git
+```md
 $ git branch <分支名>					  # 创建分支
 $ git push origin --delete <BranchName>	# 删除远程分支
 $ git branch							# 没有参数时，会列出你在本地的分支
@@ -175,7 +175,7 @@ $ git reset --hard <commit-id>			# 撤消上一次commit的内容(该操作会�
 $ git remote update -p --prune			# 更新远程分支列表
 ```
 
-```git
+```md
 $ git log								# 按提交时间列出所有的更新
 	-p -2								# 显示每次提交的内容差异
 	-<n>								# 显示最近的n次更新
@@ -207,7 +207,7 @@ $ git log								# 按提交时间列出所有的更新
 
 ## VIM
 
-```git
+```md
 $ vim test.txt			# 打开要编辑的文本
 $ vim +#				# 打开文件，并定位到#行
 ```
@@ -217,7 +217,7 @@ vim 四种模式：
 
 ##### 正常模式命令
 
-```git
+```md
 h	# 向前一个字符
 l	# 向后一个字符
 j	# 同位置向下走
@@ -227,7 +227,7 @@ N	# 查找上一个
 这几个命令前加上数字，表示向前多少个字符
 ```
 
-```git
+```md
 :q		# 退出编辑
 :wq		# 保存并退出
 :q!		# 不保存退出
@@ -282,7 +282,7 @@ v			# 进入可视模式，然后使用方向控制就可以进行选取
 
 ## 文件的移动
 
-```git
+```md
 $ git mv 1.txt lib                	# 将1.txt移动lib文件夹
 $ git mv 1.txt ./lib/2.txt		    # 修改文件名并移动到lib
 $ git mv ./lib/2.txt 1.txt 		    # 从lib文件夹移动出来并修改文件名
