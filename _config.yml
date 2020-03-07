@@ -1,1 +1,2 @@
+exclude: [/git/index.md]
 baseurl: /notes
