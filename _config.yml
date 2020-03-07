@@ -1,6 +1,10 @@
 
 # Build settings
-markdown: redcarpet
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 exclude:
   - vendor/
   - Gemfile
