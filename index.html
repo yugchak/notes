@@ -1,36 +1,56 @@
----
-layout: default
-title: My notes
-style: two
----
+<html>
+  <head>
+    <title>主页</title>
+    <style type="text/css">
+    	#container {
+    		display: block;
+	  		text-align: center;
+    	}
+        #header {
+        	
+    	}
+    	#main {
+    		position: absolute;
+    		width: 99%;
+    	}
+    	#footer {
+    		position: absolute;
+    		width: 99%;
+    		text-align: center;
+	  		bottom: 0px;
+    	}
 
-<h2>{{ page.title }}</h2>
+  
+    </style>
+  </head>
+<body>
 
-<p>最新文章</p>
+	<div id="container">
+		<div id="header">
+			<h1>Hello</h1>
 
-<ul>
+			<p>Vinty</p>
+		</div>
 
-	<div id="main">
-		<div class="td-1"><a href="/notes/git/">test</a></div> 
-		<br />
-		<div class="td-1"><a href="https://yugchak.github.io/notes/git/">HTM</a></div> 
+		<div id="main">
+			<div class="td-1"><a href="/notes/git/">test</a></div> 
+			<br />
+			<div class="td-1"><a href="https://yugchak.github.io/notes/git/">HTM</a></div> 
 
-		<br /><br />
+			<br /><br />
+		</div>
+
+		<div id="footer">
+			<p>footer</p>
+		</div>
 	</div>
 
-	{% for post in site.posts %}
-
-		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-
-	{% endfor %}
-
-	- list
-	  {% include content.html %}
-	- list
-	  {% include git.md %}
+</body>
+</html>
 
 
-</ul>
+
+	
 
 			
 
