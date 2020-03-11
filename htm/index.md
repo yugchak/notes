@@ -1,8 +1,49 @@
+[TOC]
+
+
+
+## 锚点
+
+
+
+#### **同一页面跳转**
+
+```
+<p name="add"></p> 或者 <p id="add"></p> （ps：用id兼容性好些）
+<a href="#add">跳转到add</a>
+```
+
+#### **不同页面跳转**
+
+```
+在不同页面中，锚点定位在a.html中，从另外一个页面的链接跳转到这个锚点
+<a href="a.html#add">跳转到a.add</a>
+```
+
+#### **触发js事件跳转**
+
+第一种：
+
+```
+<a href="#add" onclick="add()">触发add函数并跳转到add锚点</a>
+```
+
+第二种：
+
+```
+<p id="pNode"></p> 
+<a href="#" onclick="document.getElemetnById('pNode').scrollIntoView(true);return false;">通过scrollIntoView实现锚点效果</a>
+```
+
+
+
+
+
 ## 响应式网页
 
 
 
-**CSS的@media规则**
+#### **CSS的@media规则**
 
 ```
 /*通用样式*/
@@ -67,7 +108,11 @@
 
 
 
-**选择加载CSS**
+------
+
+
+
+#### **选择加载CSS**
 
 ```
 <link rel="stylesheet" type="text/css"
