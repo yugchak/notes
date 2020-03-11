@@ -9,8 +9,9 @@
 #### **同一页面跳转**
 
 ```
-<p name="add"></p> 或者 <p id="add"></p> （ps：用id兼容性好些）
+<a name="add"></a> 或者 <p id="add"></p> （ps：用id兼容性好些）
 <a href="#add">跳转到add</a>
+<a href="#">返回页面顶部</a>
 ```
 
 #### **不同页面跳转**
@@ -35,7 +36,15 @@
 <a href="#" onclick="document.getElemetnById('pNode').scrollIntoView(true);return false;">通过scrollIntoView实现锚点效果</a>
 ```
 
-
+> scrollIntoView()的用法
+>  **scrollIntoView**是一个与页面（容器）滚动相关的API（[官方解释](https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview)），该API只有boolean类型的参数能得到良好的支持（firefox 36+都支持），所以在这里只讨论参数Boolean类型的情况
+>  调用方法为 element.scrollIntoView() 参数默认为true。
+>
+> 参数为true时调用该函数，页面（或容器）发生滚动，使element的顶部与视图（容器）顶部对齐；
+>
+> 参数为false时，使element的底部与视图（容器）底部对齐。
+>
+> TIPS：页面（容器）可滚动时才有用！
 
 
 
