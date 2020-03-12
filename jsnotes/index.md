@@ -6,63 +6,56 @@
 ```
 var n=999;
 
-　　function f1(){
-　　　　alert(n);
-　　}
-
-　　f1(); // 999
+function f1(){
+  alert(n);
+}
+f1(); // 999
 ```
 函数外部无法读取函数内的局部变量
 ```
 function f1(){
-　　　　var n=999;
-　　}
+  var n=999;
+}
 
-　　alert(n); // error
+alert(n); // error
 ```
 但是如果不使用var命令，则声明了一个全局变量
 ```
 function f1(){
-　　　　n=999;
-　　}
+  n=999;
+}
 
-　　f1();
+f1();
 
-　　alert(n); // 999
+alert(n); // 999
 ```
 
 #### 2.如何从外部读取局部变量？
 在函数的内部，再定义一个函数
 ```
 function f1(){
+var n=999;
 
-　　　　var n=999;
-
-　　　　function f2(){
-　　　　　　alert(n); // 999
-　　　　}
-
-　　}
+  function f2(){
+    alert(n); // 999
+  }
+}
 ```
 在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的"链式作用域"结构（chain scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。
 
 既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！
 ```
 function f1(){
+  var n=999;
+  
+    function f2(){
+      alert(n);
+  }
+  return f2;
+}
 
-　　　　var n=999;
-
-　　　　function f2(){
-　　　　　　alert(n);
-　　　　}
-
-　　　　return f2;
-
-　　}
-
-　　var result=f1();
-
-　　result(); // 999
+var result=f1();
+result(); // 999
 ```
 
 #### 闭包的概念
@@ -74,26 +67,21 @@ function f1(){
 闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。
 ```
 function f1(){
+  var n=999;
 
-　　　　var n=999;
+  nAdd=function(){n+=1}
 
-　　　　nAdd=function(){n+=1}
+  function f2(){
+    alert(n);
+  }
+  return f2;
+}
 
-　　　　function f2(){
-　　　　　　alert(n);
-　　　　}
+  var result=f1();
 
-　　　　return f2;
-
-　　}
-
-　　var result=f1();
-
-　　result(); // 999
-
-　　nAdd();
-
-　　result(); // 1000
+  result(); // 999
+  nAdd();
+  result(); // 1000
 ```
 在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。
 原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。
@@ -106,39 +94,38 @@ function f1(){
 2.闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。
 
 #### 例子
-```
-var name = "The Window";
-
-　　var object = {
-　　　　name : "My Object",
-
-　　　　getNameFunc : function(){
-　　　　　　return function(){
-　　　　　　　　return this.name;
-　　　　　　};
-
-　　　　}
-
-　　};
-
-　　alert(object.getNameFunc()());
-```
 
 ```
 var name = "The Window";
 
-　　var object = {
-　　　　name : "My Object",
+var object = {
+  name : "My Object",
 
-　　　　getNameFunc : function(){
-　　　　　　var that = this;
-　　　　　　return function(){
-　　　　　　　　return that.name;
-　　　　　　};
+  getNameFunc : function(){
+    return function(){
+      return this.name;
+    };
+  }
+};
 
-　　　　}
-
-　　};
-
-　　alert(object.getNameFunc()()); 
+alert(object.getNameFunc()());  //The window
 ```
+获取object外的name属性，导致输出的是The window
+
+```
+var name = "The Window";
+  
+  var object = {
+    name : "My Object",
+
+    getNameFunc : function(){
+      var that = this;
+      return function(){
+        return that.name;
+      };
+    }
+};
+
+alert(object.getNameFunc()());   //My Object
+```
+在函数内添加了that指代了函数内的name属性，导致显示的是object内的My Object
