@@ -3,7 +3,7 @@
 - <a href="https://www.bilibili.com/bangumi/media/md2680/">男高日常</a>  
 - <a href="https://www.bilibili.com/bangumi/play/ss289/">记录的地平线</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md102312/">碧蓝之海(会员)</a>  
-- 白色相簿  <a href="https://www.bilibili.com/bangumi/media/md1078">上半篇(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220987">下半篇(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md3516/">-- 2 --</a>  
+- 白色相簿  <a href="https://www.bilibili.com/bangumi/media/md1078">上半篇(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220987">下半篇(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md3516/">第二季</a>  
 - 超时空要塞  <a href="https://www.bilibili.com/bangumi/media/md1187/">Macross</a>  <a href="https://www.bilibili.com/bangumi/media/md3530/">Δ</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md5526">超自然九人组</a>  
 - 刺客五六七  <a href="https://www.bilibili.com/bangumi/media/md6360/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md28222513/">第二季(会员)</a>  
@@ -14,11 +14,11 @@
 - <a href="https://www.bilibili.com/bangumi/media/md1102/">黑神</a>  
 - 黑之契约者  <a href="https://www.bilibili.com/bangumi/media/md1064/">第一季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md1065">第二季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md1066/">外传(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md4314622">汉化日记(会员)</a>  
-- jojo  <a href="https://www.bilibili.com/bangumi/media/md28223479">第一部&第二部(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223481">第三部上(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223483">第三部下(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md140552">第四部(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md135652">第五部(会员)</a>  
+- jojo  <a href="https://www.bilibili.com/bangumi/media/md28223479">第一季&第二季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223481">第三季上(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223483">第三季下(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md140552">第四季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md135652">第五季(会员)</a>  
 - 交响诗篇  <a href="https://www.bilibili.com/bangumi/media/md790/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md791">第二季</a>  
 - 狼与香辛料  <a href="https://www.bilibili.com/bangumi/media/md1071/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1072">第二季</a>  
 - 灵能100  <a href="https://www.bilibili.com/bangumi/media/md5058/">第一季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md4762734">第二季(会员)</a>  
-- 那年那兔那些事  <a href="https://www.bilibili.com/bangumi/media/md1689/">第一部</a>  <a href="https://www.bilibili.com/bangumi/media/md2967">第二部</a>  <a href="https://www.bilibili.com/bangumi/media/md5559">第三部</a>  <a href="https://www.bilibili.com/bangumi/media/md6018">第四部</a>  <a href="https://www.bilibili.com/bangumi/media/md28222617">第五部</a>  
+- 那年那兔那些事  <a href="https://www.bilibili.com/bangumi/media/md1689/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md2967">第二季</a>  <a href="https://www.bilibili.com/bangumi/media/md5559">第三季</a>  <a href="https://www.bilibili.com/bangumi/media/md6018">第四季</a>  <a href="https://www.bilibili.com/bangumi/media/md28222617">第五季</a>  
 - NO GAME NO LIFE  <a href="https://www.bilibili.com/bangumi/media/md184">游戏人生</a>  <a href="https://www.bilibili.com/bangumi/media/md28222224">剧场版(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md444/">魔王勇者(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md2539/">魔法少女小圆</a>  <a href="https://www.bilibili.com/bangumi/media/md28220103">剧场版1(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220104">剧场版2(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220105">剧场版3(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223817">外传(会员)</a>  
