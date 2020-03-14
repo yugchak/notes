@@ -2,14 +2,14 @@
 #container {
     display: block;
 	text-align: center;
+    max-width: 45em;
+    margin: auto;
 }
 #header {
         	
 }
 #main {
-    position: absolute;
-    max-width: 45em;
-    margin: auto;
+
 }
 #td-1 {
     border:5px solid red;
