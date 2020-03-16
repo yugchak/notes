@@ -271,6 +271,23 @@ root.mainloop()
 
 ### 标签(Label)和消息(Message)
 
+#### 常用参数
+
+| 属性名          | 属性简析                                |
+| --------------- | --------------------------------------- |
+| Anchor          | 标签中文本的位置                        |
+| background(bg)  | 背景色                                  |
+| foreground(fg)  | 前景色                                  |
+| borderwidth(bd) | 边框宽度                                |
+| width           | 标签宽度                                |
+| height          | 标签高度                                |
+| bitmap          | 标签中的位图                            |
+| font            | 字体                                    |
+| image           | 标签中的图片                            |
+| justify         | 多行文本的对齐方式                      |
+| text            | 标签中的文本，可以使用'\n'表示换行      |
+| textvariable    | 显示文本自动更新，与StringVar等配合着用 |
+
 除了单行与多行的不同外，属性和用法基本一致，用于呈现文本信息。值得注意的是：属性text通常用于实例在第一次呈现时的固定文本，而如果需要在程序执行后发生变化，则可以使用下列方法之一实现：**1、用控件实例的configure()方法来改变属性text的值，可使显示的文本发生变化；2、先定义一个tkinter的内部类型变量var=StringVar() 的值也可以使显示文本发生变化。**
 
  **看下面的一个例子**：制作一个**电子时钟**，用root的after()方法每隔1秒time模块以获取系统当前时间，并在标签中显示出来。
@@ -734,6 +751,33 @@ root.mainloop()
 
 ### 菜单(Menu)
 
+#### 常用参数
+
+| 属性名          | 属性简析                                                     |
+| --------------- | ------------------------------------------------------------ |
+| tearoff         | 分窗，0为在原窗，1为点击分为两个窗口                         |
+| bg,fg           | 背景，前景                                                   |
+| borderwidth     | 边框宽度                                                     |
+| font            | 字体                                                         |
+| activebackgound | 点击时背景，同样有activeforeground，activeborderwidth，disabledforeground |
+| cursor          |                                                              |
+| postcommand     |                                                              |
+| selectcolor     | 选中时背景                                                   |
+| takefocus       |                                                              |
+| title           | 标题                                                         |
+| type            | 类型                                                         |
+| relief          |                                                              |
+
+#### 常用方法
+
+| 方法                 | 功能                            |
+| -------------------- | ------------------------------- |
+| menu.add_cascade     | 添加子选项                      |
+| menu.add_command     | 添加命令（label参数为显示内容） |
+| menu.add_separator   | 添加分隔线                      |
+| menu.add_checkbutton | 添加确认按钮                    |
+| delete               | 删除                            |
+
 用于可视化地为一系列的命令分组，从而方便用户找到和触发执行这些命令。这里Menu所实例化别的主要是菜单，其通式为：
 
 ```xml
@@ -745,15 +789,8 @@ root.mainloop()
 
 其中较为常见的方法有：**add_cascade()、add_command()和add_separator()，分别用于添加一个菜单分组、添加一条菜单命令和添加一条分割线**。
  利用Menu控件也可以创建快捷菜单（又称为上下文菜单）。通常需要右击弹出的控件实例绑定鼠标右击响应事件<Button-3>,并指向一个捕获event参数的自定义函数，在该自定义函数中，将鼠标的触发位置event.x_root 和 event.y_root以post()方法传给菜单。
- **例子:**仿照window自带的“记事本”中的文件和编辑 菜单，实现在主菜单个快捷菜单上触发菜单命令，并相应改变窗体上的标签的文本内容。效果如下：
 
-![img](https:////upload-images.jianshu.io/upload_images/1728484-baa6e11314d56b91.png?imageMogr2/auto-orient/strip|imageView2/2/w/636/format/webp)
-
-菜单和快捷菜单
-
-
-
-
+- 例子：仿照window自带的“记事本”中的文件和编辑 菜单，实现在主菜单个快捷菜单上触发菜单命令，并相应改变窗体上的标签的文本内容。如下：
 
 ```python
 from tkinter import *
@@ -812,244 +849,296 @@ root.bind('Button-3',popupmenu) # 根窗体绑定鼠标右击响应事件
 root.mainloop()
 ```
 
-- **3.8、子窗体**：用Toplevel可新建一个显示在最前面的子窗体，其通式为： `字体实例名=Toplevel(根窗体)`，子窗体与根窗体类似，也可设置title、geomerty等属性，并在画布上布局其他控件。如下的例子：**在根窗体上创建菜单，触发创建一个新的窗体**
 
-  ![img](https:////upload-images.jianshu.io/upload_images/1728484-f01d684ad503ea54.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
 
-  根窗体与子窗体
+### 子窗体
 
-  
+用Toplevel可新建一个显示在最前面的子窗体，其通式为： `字体实例名=Toplevel(根窗体)`，子窗体与根窗体类似，也可设置title、geomerty等属性，并在画布上布局其他控件。
 
-  
+- 例子：**在根窗体上创建菜单，触发创建一个新的窗体**
 
-  ```python
-  from tkinter import *
-  
-  def newwind():
-        winNew = Toplevel(root)
-        winNew.geometry('320x240')
-        winNew.title('新窗体')
-        lb2 = Label(winNew,text='我在新窗体上')
-        lb2.place(relx=0.2,rely=0.2)
-        btClose=Button(winNew,text='关闭',command=winNew.destroy)
-        btClose.place(relx=0.7,rely=0.5)
-  
-  root = Tk()
-  root.title('新建窗体实验')
-  root.geometry('320x240')
-  
-  lb1 = Label(root,text='主窗体',font=('黑体',32,'bold'))
-  lb1.place(relx=0.2,rely=0.2)
-  
-  mainmenu = Menu(root)
-  menuFile = Menu(mainmenu)
-  mainmenu.add_cascade(label='菜单',menu=menuFile)
-  menuFile.add_command(label='新窗体',command=newwind)
-  menuFile.add_separator()
-  menuFile.add_command(label='退出',command=root.destroy)
-  
-  root.config(menu=mainmenu)
-  root.mainloop()
-  ```
+```python
+from tkinter import *
 
-  关闭窗体程序运行的方法通常用 destory(),而不建议用 quit()。用Toplevel 所创建的子窗体是非模式（Modeless）的窗体，虽然初建时子窗体在最前面，但根窗体上的控件实例也是可以被操作的。
+def newwind():
+      winNew = Toplevel(root)
+      winNew.geometry('320x240')
+      winNew.title('新窗体')
+      lb2 = Label(winNew,text='我在新窗体上')
+      lb2.place(relx=0.2,rely=0.2)
+      btClose=Button(winNew,text='关闭',command=winNew.destroy)
+      btClose.place(relx=0.7,rely=0.5)
 
-- **3.9、模式对话框(Modal)**：是相对于前面介绍的非模式窗体而言的，所弹出的对话框必须应答，在关闭之前无法操作其后面的其他窗体。常见的模式对话框有消息对话框、输入对话框、文件选择对话框、颜色选择对话框等。
+root = Tk()
+root.title('新建窗体实验')
+root.geometry('320x240')
 
-  - **3.9.1、交互对话框**
+lb1 = Label(root,text='主窗体',font=('黑体',32,'bold'))
+lb1.place(relx=0.2,rely=0.2)
 
-    **(一)、消息对话框**: 引用 tkinter.messagebox 包，可使用消息对话框函数。执行这些函数，可弹出模式消息对话框，并根据用户的响应但会一个布尔值。其通式为：
+mainmenu = Menu(root)
+menuFile = Menu(mainmenu)
+mainmenu.add_cascade(label='菜单',menu=menuFile)
+menuFile.add_command(label='新窗体',command=newwind)
+menuFile.add_separator()
+menuFile.add_command(label='退出',command=root.destroy)
 
-    
+root.config(menu=mainmenu)
+root.mainloop()
+```
 
-    ```xml
-     消息对话框函数(<title=标题文本>,<message=消息文本>,[其他参数])
-    ```
+关闭窗体程序运行的方法通常用 destory(),而不建议用 quit()。用Toplevel 所创建的子窗体是非模式（Modeless）的窗体，虽然初建时子窗体在最前面，但根窗体上的控件实例也是可以被操作的。
 
-    看下面的例子：单击按钮，弹出确认取消对话框，并将用户回答显示在标签中。效果如下：
 
-    ![img](https:////upload-images.jianshu.io/upload_images/1728484-9e3ba3df801b8e15.png?imageMogr2/auto-orient/strip|imageView2/2/w/934/format/webp)
 
-    确定取消对话框
+## 模式对话框(Modal)
 
-    
+### 交互对话框
 
-    ```python
-    from tkinter import *
-    import tkinter.messagebox
-    
-    def xz():
-        answer=tkinter.messagebox.askokcancel('请选择','请选择确定或取消')
-        if answer:
-            lb.config(text='已确认')
-        else:
-            lb.config(text='已取消')
-    
-    root = Tk()
-    
-    lb = Label(root,text='')
-    lb.pack()
-    btn=Button(root,text='弹出对话框',command=xz)
-    btn.pack()
-    root.mainloop()
-    ```
 
-    **(二)、输入对话框**: 引用tkinter.simpledialog包，可弹出输入对话框，用以接收用户的简单输入。输入对话框常用 askstring()、askfloat()和askfloat() 三种函数，分别用于接收字符串、整数和浮点数类型的输入。
-     **如下面的例子：**单击按钮，弹出输入对话框，接收文本输入显示在窗体的标签上。如下：
 
-    ![img](https:////upload-images.jianshu.io/upload_images/1728484-c05cd14660cab368.png?imageMogr2/auto-orient/strip|imageView2/2/w/800/format/webp)
+#### 消息对话框(messagebox)
 
-    输入对话框
+##### messagebox._show函数的控制参数
 
-    
+| 属性名  | 属性简析               |
+| ------- | ---------------------- |
+| default | 指定消息框按钮         |
+| icon    | 指定消息框图标         |
+| message | 指定消息框所显示的消息 |
+| parent  | 指定消息框的父组件     |
+| title   | 标题                   |
+| type    | 类型                   |
 
-    
+引用 tkinter.messagebox 包，可使用消息对话框函数。执行这些函数，可弹出模式消息对话框，并根据用户的响应但会一个布尔值。其通式为：
 
-    ```python
-    from tkinter.simpledialog import *
-    
-    def xz():
-        s=askstring('请输入','请输入一串文字')
-        lb.config(text=s)
-    
-    root = Tk()
-    
-    lb = Label(root,text='')
-    lb.pack()
-    btn=Button(root,text='弹出输入对话框',command=xz)
-    btn.pack()
-    root.mainloop()
-    ```
+```xml
+ 消息对话框函数(<title=标题文本>,<message=消息文本>,[其他参数])
+```
 
-  - **3.9.2、文件选择对话框**：引用tkinter.filedialog包，可弹出文件选择对话框，让用户直观地选择一个或一组文件，以供进一步的文件操作。常用的文件选择对话框函数有 askopenfilename()、askopenfilenames()和asksaveasfilename(),分别用于进一步打开一个文件、一组文件和保存文件。其中，askopenfilename()和asksaveasfilenamme()函数的返回值类型为包含文件路径的文件名字符串，而askopenfilenames()函数的返回值类型为元组。
-     例如：单击按钮，弹出文件选择对话框（“打开”对话框），并将用户所选择的文件路径和文件名显示在窗体的标签上。如下
+- 例子：单击按钮，弹出确认取消对话框，并将用户回答显示在标签中。如下：
 
-    ![img](https:////upload-images.jianshu.io/upload_images/1728484-899f084d30ed74d8.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+```python
+from tkinter import *
+import tkinter.messagebox
 
-    文件选择对话框
+def xz():
+    answer=tkinter.messagebox.askokcancel('请选择','请选择确定或取消')
+    if answer:
+        lb.config(text='已确认')
+    else:
+        lb.config(text='已取消')
 
-    
+root = Tk()
 
-    
+lb = Label(root,text='')
+lb.pack()
+btn=Button(root,text='弹出对话框',command=xz)
+btn.pack()
+root.mainloop()
+```
 
-    ```python
-    from tkinter import *
-    import tkinter.filedialog
-    
-    def xz():
-        filename=tkinter.filedialog.askopenfilename()
-        if filename != '':
-             lb.config(text='您选择的文件是'+filename)
-        else:
-             lb.config(text='您没有选择任何文件')
-    
-    root = Tk()
-    
-    lb = Label(root,text='')
-    lb.pack()
-    btn=Button(root,text='弹出文件选择对话框',command=xz)
-    btn.pack()
-    root.mainloop()
-    ```
+#### 输入对话框
 
-  - **3.9.3、颜色选择对话框**：引用tkinter.colorchooser包，可使用 askcolor()函数弹出模式颜色选择对话框，让用户可以个性化地设置颜色属性。该函数的返回形式为包含RGB十进制浮点元组和RGB十六进制字符串的元组类型，例如：“((135.527343.52734375,167.65234375,186.7265625)),'#87a7ba'”。通常，可将其转换为字符串类型后，再截取以十六进制数表示的RGB颜色字符串用于为属性赋值。
-     举例：单击按钮，弹出颜色选择对话框，并将用户所选择的颜色设置为窗体上标签的背景颜色，如下：
+##### 常用参数
 
-    ![img](https:////upload-images.jianshu.io/upload_images/1728484-81170046f899bd63.png?imageMogr2/auto-orient/strip|imageView2/2/w/890/format/webp)
+| 属性         | 功能描述           |
+| ------------ | ------------------ |
+| title        | 指定对话框的标题   |
+| prompt       | 显示的文字         |
+| initialvalue | 指定输入框的初始值 |
 
-    颜色选择对话框
+引用tkinter.simpledialog包，可弹出输入对话框，用以接收用户的简单输入。输入对话框常用 askstring()、askfloat()和askfloat() 三种函数，分别用于接收字符串、整数和浮点数类型的输入。
 
-    
+- 例子：单击按钮，弹出输入对话框，接收文本输入显示在窗体的标签上。如下：
 
-    
+```python
+from tkinter.simpledialog import *
 
-    ```python
-    from tkinter import *
-    import tkinter.colorchooser
-    
-    def xz():
-        color=tkinter.colorchooser.askcolor()
-        colorstr=str(color)
-        print('打印字符串%s 切掉后=%s' % (colorstr,colorstr[-9:-2]))
-        lb.config(text=colorstr[-9:-2],background=colorstr[-9:-2])
-    
-    root = Tk()
-    
-    lb = Label(root,text='请关注颜色的变化')
-    lb.pack()
-    btn=Button(root,text='弹出颜色选择对话框',command=xz)
-    btn.pack()
-    root.mainloop()
-    ```
+def xz():
+    s=askstring('请输入','请输入一串文字')
+    lb.config(text=s)
 
-- **4、事件响应**
-   用tkinter 可将用户事件与自定义函数绑定，用键盘或鼠标的动作事件来响应触发自定义函数的执行。其通式为：
+root = Tk()
 
-  
+lb = Label(root,text='')
+lb.pack()
+btn=Button(root,text='弹出输入对话框',command=xz)
+btn.pack()
+root.mainloop()
+```
 
-  ```jsx
-  控件实例.bind(<事件代码>,<函数名>)
-  ```
+### 文件选择对话框
 
-  其中，事件代码通常以半角小于号“<”和大于号“>” 界定，包括事件和按键等 2~3个部分，它们之间用减号分隔，常见事件代码见下表：
+#### 常用参数
 
-  | 事件             | 事件代码                                                | 备注                                                  |
-  | ---------------- | ------------------------------------------------------- | ----------------------------------------------------- |
-  | 单击鼠标左键     | <ButtonPress-1>                                         | 可简写为<Button-1> 或 <1>                             |
-  | 单击鼠标中键     | <ButtonPress-2>                                         | 可简写为<Button-2> 或 <2>                             |
-  | 单击鼠标右键     | <ButtonPress-3>                                         | 可简写为<Button-3> 或 <3>                             |
-  | 释放鼠标左键     | <ButtonRelease-1>                                       | ---                                                   |
-  | 释放鼠标中键     | <ButtonRelease-2>                                       | ---                                                   |
-  | 释放鼠标右键     | <ButtonRelease-3>                                       | ---                                                   |
-  | 按住鼠标左键移动 | <B1-Motion>                                             | ---                                                   |
-  | 按住鼠标中键移动 | <B2-Motion>                                             | ---                                                   |
-  | 按住鼠标右键移动 | <B3-Motion>                                             | ---                                                   |
-  | 转动鼠标滚轮     | <MouseWheel>                                            | ---                                                   |
-  | 双击鼠标左键     | <Double-Button-1>                                       | ---                                                   |
-  | 鼠标进入控件实例 | <Enter>                                                 | 注意与回车事件的区别                                  |
-  | 鼠标离开控件实例 | <Leave>                                                 | ---                                                   |
-  | 键盘任意键       | <Key>                                                   | ---                                                   |
-  | 字母和数字       | < Key-字母>,例如<key-a>、<Key-A>                        | 简写不带小于和大于号,例如:a,A和1等                    |
-  | 回车             | <Return>                                                | <Tab>,<Shift>,<Control>(注意不能用<Ctrl>),<Alt>等类同 |
-  | 空格             | <Space>                                                 | ---                                                   |
-  | 方向键           | <Up> ,<Down>,<Left>,<Right>                             | ---                                                   |
-  | 功能键           | <Fn>例如:<F1>等                                         | ---                                                   |
-  | 组合键           | 键名之间以减号链接,例如<Control-k>,<Shift-6>,<Alt-Up>等 | 注意大小写                                            |
+| 属性        | 功能描述       |
+| ----------- | -------------- |
+| filetype    | 指定文件类型   |
+| initialdir  | 指定默认目录   |
+| initialfile | 指定默认文件   |
+| title       | 指定对话框标题 |
 
-  例如,将框架控件实例frame 绑定鼠标右键单击事件,调用自定义函数 myfunc()可表示为"`frame.bind('',myfunc)`",注意: myfunc后面没有括号。将控件实例绑定到键盘事件和部分光标不落在具体控件实例上的鼠标事件时，还需要设置该实例执行focus_set() 方法获得焦点，才能对事件持续响应。例如： frame.focus_set()。所调用的自定义函数若需要利用鼠标或键盘的响应值，可将event作为参数，通过event的属性获取。event的属性见下表：
+引用tkinter.filedialog包，可弹出文件选择对话框，让用户直观地选择一个或一组文件，以供进一步的文件操作。常用的文件选择对话框函数有 askopenfilename()、askopenfilenames()和asksaveasfilename(),分别用于进一步打开一个文件、一组文件和保存文件。其中，askopenfilename()和asksaveasfilenamme()函数的返回值类型为包含文件路径的文件名字符串，而askopenfilenames()函数的返回值类型为元组。
 
-  | event属性                    | 意义                                           |
-  | ---------------------------- | ---------------------------------------------- |
-  | x或y（注意是小写）           | 相对于事件绑定控件实例左上角的坐标值(像素)     |
-  | root_x或root_y（注意是小写） | 相对于显示屏幕左上角的坐标值(像素)             |
-  | char                         | 可显示的字符，若按键不可显示，则返回为空字符串 |
-  | keysysm                      | 字符或字符型按键名，如：“a”或“Escape”          |
-  | keysysm_num                  | 按键的十进制 ASCII 码值                        |
+- 例子：单击按钮，弹出文件选择对话框（“打开”对话框），并将用户所选择的文件路径和文件名显示在窗体的标签上。如下：
 
-  例如：将标签绑定键盘任意键触发事件并获取焦点，并将按键字符显示在标签上
+```python
+from tkinter import *
+import tkinter.filedialog
 
-  ![img](https:////upload-images.jianshu.io/upload_images/1728484-388bef4a51c8918b.jpeg?imageMogr2/auto-orient/strip|imageView2/2/w/1000/format/webp)
+def xz():
+    filename=tkinter.filedialog.askopenfilename()
+    if filename != '':
+         lb.config(text='您选择的文件是'+filename)
+    else:
+         lb.config(text='您没有选择任何文件')
 
-  响应键盘事件
+root = Tk()
 
-  
+lb = Label(root,text='')
+lb.pack()
+btn=Button(root,text='弹出文件选择对话框',command=xz)
+btn.pack()
+root.mainloop()
+```
 
-  ```python
-  from tkinter import *
-  
-  def show(event):
-  s=event.keysym
-  lb.config(text=s)
-  
-  root=Tk()
-  root.title('按键实验')
-  root.geometry('200x200')
-  lb=Label(root,text='请按键',font=('黑体',48))
-  lb.bind('<Key>',show)
-  lb.focus_set()
-  lb.pack()
-  root.mainloop()
-  ```
+### 颜色选择对话框
+
+#### 常用参数
+
+| 属性         | 功能描述       |
+| ------------ | -------------- |
+| initialcolor | 指定初始化颜色 |
+| title        | 指定对话框标题 |
+
+引用tkinter.colorchooser包，可使用 askcolor()函数弹出模式颜色选择对话框，让用户可以个性化地设置颜色属性。该函数的返回形式为包含RGB十进制浮点元组和RGB十六进制字符串的元组类型，例如：“((135.527343.52734375,167.65234375,186.7265625)),'#87a7ba'”。通常，可将其转换为字符串类型后，再截取以十六进制数表示的RGB颜色字符串用于为属性赋值。
+
+- 例子：单击按钮，弹出颜色选择对话框，并将用户所选择的颜色设置为窗体上标签的背景颜色，如下：
+
+```python
+from tkinter import *
+import tkinter.colorchooser
+
+def xz():
+    color=tkinter.colorchooser.askcolor()
+    colorstr=str(color)
+    print('打印字符串%s 切掉后=%s' % (colorstr,colorstr[-9:-2]))
+    lb.config(text=colorstr[-9:-2],background=colorstr[-9:-2])
+
+root = Tk()
+
+lb = Label(root,text='请关注颜色的变化')
+lb.pack()
+btn=Button(root,text='弹出颜色选择对话框',command=xz)
+btn.pack()
+root.mainloop()
+```
+
+
+
+## 事件响应
+
+ 用tkinter 可将用户事件与自定义函数绑定，用键盘或鼠标的动作事件来响应触发自定义函数的执行。其通式为：
+
+```jsx
+控件实例.bind(<事件代码>,<函数名>)
+控件实例.bind_class(className,sequence,func,add)
+控件实例.bind_all(sequence,func,add)
+```
+
+#### 事件参数
+
+| 属性      | 功能描述                |
+| --------- | ----------------------- |
+| sequence  | 所绑定的事件            |
+| func      | 所绑定的事件处理函数    |
+| add       | 可选参数，为空字符或‘+’ |
+| className | 所绑定的类              |
+
+#### 窗口事件
+
+| 事件       | 功能描述                           |
+| ---------- | ---------------------------------- |
+| Activate   | 当组件由不可用转为可用时触发       |
+| Configure  | 当组件大小改变时触发               |
+| Deactivate | 当组件由可用转变为不可用时触发     |
+| Destroy    | 当组件被销毁时触发                 |
+| Expose     | 当组件从被遮挡状态中暴露出来时触发 |
+| Unmap      | 当组件由显示状态变为隐藏状态时触发 |
+| Map        | 当组件由隐藏状态变为显示状态时触发 |
+| FocusIn    | 当组件获得焦点时触发               |
+| FocusOut   | 当组件失去焦点时触发               |
+| Property   | 当窗体的属性被删除或改变时触发     |
+| Visibility | 当组件变为可视状态时触发           |
+
+#### 鼠标键盘事件
+
+事件代码通常以半角小于号“<”和大于号“>” 界定，包括事件和按键等 2~3个部分，它们之间用减号分隔
+
+| 事件             | 事件代码                                                     | 备注                                                  |
+| ---------------- | ------------------------------------------------------------ | ----------------------------------------------------- |
+| 单击鼠标左键     | <ButtonPress-1>                                              | 可简写为<Button-1> 或 <1>                             |
+| 单击鼠标中键     | <ButtonPress-2>                                              | 可简写为<Button-2> 或 <2>                             |
+| 单击鼠标右键     | <ButtonPress-3>                                              | 可简写为<Button-3> 或 <3>                             |
+| 释放鼠标左键     | <ButtonRelease-1>                                            | ---                                                   |
+| 释放鼠标中键     | <ButtonRelease-2>                                            | ---                                                   |
+| 释放鼠标右键     | <ButtonRelease-3>                                            | ---                                                   |
+| 按住鼠标左键移动 | <B1-Motion>                                                  | ---                                                   |
+| 按住鼠标中键移动 | <B2-Motion>                                                  | ---                                                   |
+| 按住鼠标右键移动 | <B3-Motion>                                                  | ---                                                   |
+| 转动鼠标滚轮     | <MouseWheel>                                                 | ---                                                   |
+| 双击鼠标左键     | <Double-Button-1>                                            | ---                                                   |
+| 鼠标进入控件实例 | <Enter>                                                      | 注意与回车事件的区别                                  |
+| 鼠标离开控件实例 | <Leave>                                                      | ---                                                   |
+| 键盘任意键       | <Key>                                                        | ---                                                   |
+| 字母和数字       | <KeyPress-字母>                                              | 同下                                                  |
+| 字母和数字       | < Key-字母>,例如<key-a>、<Key-A>                             | 简写不带小于和大于号,例如:a,A和1等                    |
+| 按两下           | <Double-KeyPress-字母>                                       | 快速按两下                                            |
+| 大写状态         | <Lock-KeyPress-字母>,例如<Lock-KeyPress-A>                   | 大写状态下按A                                         |
+| 回车             | <Return>                                                     | <Tab>,<Shift>,<Control>(注意不能用<Ctrl>),<Alt>等类同 |
+| 空格             | <Space>                                                      | ---                                                   |
+| 方向键           | <Up> ,<Down>,<Left>,<Right>                                  | ---                                                   |
+| 功能键           | <Fn>例如:<F1>等                                              | ---                                                   |
+| 组合键           | <Alt-KeyPress-A>键名之间以减号链接,例如<Control-k>,<Shift-6>,<Alt-Up>等 | 注意大小写,alt可用ctrl和shift替代                     |
+
+例如,将框架控件实例frame 绑定鼠标右键单击事件,调用自定义函数 myfunc()可表示为"`frame.bind('',myfunc)`",注意: myfunc后面没有括号。将控件实例绑定到键盘事件和部分光标不落在具体控件实例上的鼠标事件时，还需要设置该实例执行focus_set() 方法获得焦点，才能对事件持续响应。例如： frame.focus_set()。所调用的自定义函数若需要利用鼠标或键盘的响应值，可将event作为参数，通过event的属性获取。
+
+#### 响应事件
+
+event对象（def function(event)）
+
+| event属性                    | 功能描述                                       |
+| ---------------------------- | ---------------------------------------------- |
+| x或y（注意是小写）           | 相对于事件绑定控件实例左上角的坐标值(像素)     |
+| root_x或root_y（注意是小写） | 相对于显示屏幕左上角的坐标值(像素)             |
+| char                         | 可显示的字符，若按键不可显示，则返回为空字符串 |
+| keysysm                      | 字符或字符型按键名，如：“a”或“Escape”          |
+| keysysm_num                  | 按键的十进制 ASCII 码值                        |
+| keycode                      | 按键名，仅对键盘事件有效                       |
+| num                          | 鼠标按键，仅对鼠标事件有效                     |
+| type                         | 所触发的事件类型                               |
+| widget                       | 引起事件的组件                                 |
+| width,heigh                  | 组件改变后的大小，仅Configure有效              |
+
+- 例子：将标签绑定键盘任意键触发事件并获取焦点，并将按键字符显示在标签上，如下：
+
+```python
+from tkinter import *
+
+def show(event):
+s=event.keysym
+lb.config(text=s)
+
+root=Tk()
+root.title('按键实验')
+root.geometry('200x200')
+lb=Label(root,text='请按键',font=('黑体',48))
+lb.bind('<Key>',show)
+lb.focus_set()
+lb.pack()
+root.mainloop()
+```
 
 
 
