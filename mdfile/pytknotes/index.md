@@ -549,7 +549,7 @@ def run():
          s = "您选择了%s %s %s %s" % (s1,s2,s3,s4)
      lb2.config(text=s)
 
-root = tkinter.Tk()
+root = Tk()
 root.title('复选框')
 lb1=Label(root,text='请选择您的爱好项目')
 lb1.pack()
@@ -830,6 +830,7 @@ lb1 = Label(root,text='显示信息',font=('黑体',32,'bold'))
 lb1.place(relx=0.2,rely=0.2)
 
 mainmenu = Menu(root)
+# menuFile = Menu(mainmenu, tearoff=0)可以隐藏分窗
 menuFile = Menu(mainmenu)  # 菜单分组 menuFile
 mainmenu.add_cascade(label="文件",menu=menuFile)
 menuFile.add_command(label="新建",command=new)
@@ -838,11 +839,12 @@ menuFile.add_command(label="保存",command=sav)
 menuFile.add_separator()  # 分割线
 menuFile.add_command(label="退出",command=root.destroy)
 
+# menuEdit = Menu(mainmenu, tearoff=0)可以隐藏分窗
 menuEdit = Menu(mainmenu)  # 菜单分组 menuEdit
 mainmenu.add_cascade(label="编辑",menu=menuEdit)
 menuEdit.add_command(label="剪切",command=cut)
-menuEdit.add_command(label="复制",command=cop())
-menuEdit.add_command(label="粘贴",command=pas())
+menuEdit.add_command(label="复制",command=cop)
+menuEdit.add_command(label="粘贴",command=pas)
 
 root.config(menu=mainmenu)
 root.bind('Button-3',popupmenu) # 根窗体绑定鼠标右击响应事件
@@ -877,7 +879,7 @@ lb1 = Label(root,text='主窗体',font=('黑体',32,'bold'))
 lb1.place(relx=0.2,rely=0.2)
 
 mainmenu = Menu(root)
-menuFile = Menu(mainmenu)
+menuFile = Menu(mainmenu)	# menuFile = Menu(mainmenu, tearoff=0)可以隐藏分窗
 mainmenu.add_cascade(label='菜单',menu=menuFile)
 menuFile.add_command(label='新窗体',command=newwind)
 menuFile.add_separator()
