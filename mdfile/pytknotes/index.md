@@ -1,5 +1,5 @@
 <head>
-  <link rel="icon" type="image/x-icon" href="h.ico" />
+  <link rel="Shortcut Icon" type="image/x-icon" href="h.ico" />
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
