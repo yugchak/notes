@@ -1,5 +1,5 @@
 <head>
-  <title>主页</title>
+  <link rel="icon" type="image/x-icon" href="./h.ico" />
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
