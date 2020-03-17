@@ -1,17 +1,8 @@
 <head>
+  <link rel="Shortcut Icon" type="image/x-icon" href="h.ico" />
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript">
-    (function() {
-      var link = document.createElement('link');
-      link.type = 'image/x-icon';
-      link.rel = 'shortcut icon';
-      link.href = 'h.ico';
-      document.getElementsByTagName('head')[0].appendChild(link);
-    }());
-  </script>
 </head>
 
-- 1
 - [图形化界面设计的基本理解](#图形化界面设计的基本理解)
 - [窗体控件布局](#窗体控件布局)
 - [tkinter常用控件](#tkinter常用控件)
