@@ -5,6 +5,7 @@
     - [4.闭包的用途](#闭包的用途)
     - [5.使用闭包的注意点](#使用闭包的注意点)
     - [6.例子](#例子)
+- [JS导入icon](#js导入icon)
 
 ## 闭包
 #### 变量的作用域
@@ -135,3 +136,19 @@ var name = "The Window";
 alert(object.getNameFunc()());   //My Object
 ```
 在函数内添加了that指代了函数内的name属性，导致显示的是object内的My Object
+
+
+
+## JS导入icon
+
+```
+<script type="text/javascript">
+	(function() {
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = 'h.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}());
+</script>
+```
