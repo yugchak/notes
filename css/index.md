@@ -11,7 +11,7 @@
 </head>
 
 
-## B站资源
+## B站资源--
 
 - <a href="https://www.bilibili.com/bangumi/media/md2680/">男高日常</a>  
 - <a href="https://www.bilibili.com/bangumi/play/ss289/">记录的地平线</a>  
