@@ -1,3 +1,16 @@
+<head>
+	<script type="text/javascript">
+	(function() {
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = '../h.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}());
+	</script>
+</head>
+
+
 ## B站资源
 
 - <a href="https://www.bilibili.com/bangumi/media/md2680/">男高日常</a>  
