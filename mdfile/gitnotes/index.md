@@ -1,3 +1,16 @@
+<head>
+	<script type="text/javascript">
+	(function() {
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = '../h.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}());
+	</script>
+</head>
+
+
 - [本地初始化仓库](#本地初始化仓库)
 - [获取远程仓库](#获取远程仓库)
 - [添加文件或者文件夹](#添加文件或者文件夹)
@@ -6,7 +19,7 @@
 - [提交修改](#提交修改)
 - [暂存区](#暂存区)
 - [分支](#分支)
-- [VIM](#VIM)
+- [VIM](#vim)
 	 - [正常模式命令](#正常模式命令)
 	 - [切换插入模式](#切换插入模式)
 	 - [切换可视模式](#切换可视模式)

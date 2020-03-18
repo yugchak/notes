@@ -1,3 +1,16 @@
+<head>
+	<script type="text/javascript">
+	(function() {
+		var link = document.createElement('link');
+		link.type = 'image/x-icon';
+		link.rel = 'shortcut icon';
+		link.href = '../h.ico';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	}());
+	</script>
+</head>
+
+
 - [锚点](#锚点)
 	- [同一页面跳转](#同一页面跳转)
 	- [不同页面跳转](#不同页面跳转)

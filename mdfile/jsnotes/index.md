@@ -1,3 +1,16 @@
+<head>
+  <script type="text/javascript">
+  (function() {
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = '../h.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }());
+  </script>
+</head>
+
+
 - [闭包](#闭包)
     - [1.变量的作用域](#变量的作用域)
     - [2.如何从外部读取局部变量？](#如何从外部读取局部变量)
