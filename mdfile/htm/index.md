@@ -8,6 +8,7 @@
 		document.getElementsByTagName('head')[0].appendChild(link);
 	}());
 	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 
@@ -157,3 +158,8 @@ href="smallScreen.css" />
 ```
 
 如果屏幕宽度在400像素到600像素之间，则加载smallScreen.css文件。
+
+
+<div id="toTop">
+  <a href="#" class="ryi-angle-up"></a>
+</div>
