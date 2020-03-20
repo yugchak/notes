@@ -8,6 +8,7 @@
 		document.getElementsByTagName('head')[0].appendChild(link);
 	}());
 	</script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 
@@ -324,4 +325,6 @@ $ git mv 1.txt 2.rb					# 修改文件名和修改文件后缀
 ```
 
 
-
+<div id="toTop">
+  <a href="#" class="ryi-angle-up"></a>
+</div>
