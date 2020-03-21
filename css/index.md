@@ -27,6 +27,7 @@
 - <a href="https://www.bilibili.com/bangumi/media/md1102/">黑神</a>  
 - 黑之契约者  <a href="https://www.bilibili.com/bangumi/media/md1064/">第一季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md1065">第二季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md1066/">外传(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md4314622">汉化日记(会员)</a>  
+- <a href="https://www.bilibili.com/bangumi/media/md6339/">欢迎来到实力至上主义的教室(会员)</a>  
 - jojo  <a href="https://www.bilibili.com/bangumi/media/md28223479">第一季&第二季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223481">第三季上(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223483">第三季下(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md140552">第四季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md135652">第五季(会员)</a>  
 - 交响诗篇  <a href="https://www.bilibili.com/bangumi/media/md790/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md791">第二季</a>  
 - 狼与香辛料  <a href="https://www.bilibili.com/bangumi/media/md1071/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1072">第二季</a>  
@@ -98,11 +99,13 @@
 
 #### 电影
 
-变焦、电影少女2018、闪灵、毒诫、电锯惊魂、宿敌、波西米亚狂想曲、疯狂外星人、速度与激情-特别行动、婚姻故事、爱尔兰人、痛苦与荣耀、别告诉她
+变焦、电影少女2018、闪灵、毒诫、电锯惊魂、宿敌、波西米亚狂想曲、疯狂外星人、速度与激情-特别行动、婚姻故事、爱尔兰人、痛苦与荣耀、别告诉她、秘密防御
+
+终极细胞战、头脑特工队
 
 #### 电视剧
 
-绝命毒师、切尔诺贝利、疑犯追踪、权力的游戏、终结一吻、名侦探守则、伽利略、上锁的房间、盲点、想见你、暗黑
+绝命毒师、切尔诺贝利、疑犯追踪、权力的游戏、终结一吻、名侦探守则、伽利略、上锁的房间、盲点、想见你、暗黑、守望者
 
 #### 短片
 
