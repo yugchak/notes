@@ -1,5 +1,79 @@
 
 
+## Selenium
+
+### 元素定位
+
+#### 定位方法
+
+1. id定位：find_element_by_id(self, id_)
+2. name定位：find_element_by_name(self, name)
+3. class定位：find_element_by_class_name(self, name)
+4. tag定位：find_element_by_tag_name(self, name)
+5. link定位：find_element_by_link_text(self, link_text)
+6. partial_link定位find_element_by_partial_link_text(self, link_text)
+7. xpath定位：find_element_by_xpath(self, xpath)
+8. css定位：find_element_by_css_selector(self, css_selector）
+
+复数形式
+
+9. id复数定位find_elements_by_id(self, id_)
+10. name复数定位find_elements_by_name(self, name)
+11. class复数定位find_elements_by_class_name(self, name)
+12. tag复数定位find_elements_by_tag_name(self, name)
+13. link复数定位find_elements_by_link_text(self, text)
+14. partial_link复数定位find_elements_by_partial_link_text(self, link_text)
+15. xpath复数定位find_elements_by_xpath(self, xpath)
+16. css复数定位find_elements_by_css_selector(self, css_selector)
+
+以下两种即将失传
+find_element(self, by='id', value=None)
+find_elements(self, by='id', value=None)
+
+#### 区别
+
+1.element方法定位到是是单数，是直接定位到元素
+
+2.elements方法是复数，这个学过英文的都知道，定位到的是一组元素，返回的是list队列
+
+3.可以用type()函数查看数据类型
+
+4.打印这个返回的内容看看有什么不一样
+
+
+
+### 判断元素存在
+
+1. find_elements方法判断
+
+```
+def is_element_exist(css)
+	s = driver.find_elements_by_css_selector(css_sclector=css)
+	is len(s) == 0:
+		print("元素未找到：%s" % css)
+		return False
+	elif len(s) == 1:
+		return True
+	else:
+		print("找到%s个元素： %s" % (len(s),css)
+		return False
+```
+
+2. 捕获异常方法
+
+```
+def is_element_exist(css)
+	try:
+		driver.find_element_by_css_selector(css)
+		return True
+	except:
+		return False
+```
+
+
+
+------
+
 ## 转码
 
 ASCII 是一种字符集,包括大小写的英文字母、数字、控制字符等，它用一个字节表示，范围是 0-127 Unicode分为UTF-8和UTF-16。
@@ -41,6 +115,8 @@ print x.encode("gbk")
 ```
 
 
+
+------
 
 ## 网址编码
 
