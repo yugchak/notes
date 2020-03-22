@@ -41,6 +41,72 @@
 
 
 
+# 解析页面
+
+### 正则表达式大法
+
+正则表达式通常被用来检索、替换那些符合某个模式的文本，所以我们可以利用这个原理来提取我们想要的信息。
+
+正则的好处是编写麻烦，理解不容易，但是匹配效率很高，不过时至今日有太多现成的HTMl内容解析库之后，不太建议再手动用正则来对内容进行匹配了，费时费力。
+
+- 例子：
+
+```
+import re
+
+bs1 = re.findall("<h3 class=\"tit\">(.*?)</h3>", str(data))
+```
+
+
+
+### requests-html
+
+作者高度封装过requests-html，连请求返回内容的编码格式转换也自动做了，完全可以让我的代码逻辑简单直接，更专注于解析工作本身
+
+- 例子：
+
+```
+from requests_html import HTMLSession
+
+links = response.html.find('table.olt', first=True).find('a') 
+```
+
+
+
+### BeautifulSoup
+
+BeautifulSoup解析内容同样需要将请求和解析分开，从代码清晰程度来讲还将就，不过在做复杂的解析时代码略显繁琐
+
+- 例子：
+
+```
+from bs4 import BeautifulSoup
+
+bf = BeautifulSoup(data, "html.parser")
+pic = bf.find_all('h3', {"class": 'tit'})
+pic_bf = BeautifulSoup(str(pic), "html.parser")
+img = pic_bf.find_all('a')
+```
+
+
+
+### lxml的XPath
+
+lxml这个库同时 支持HTML和XML的解析，支持XPath解析方式，解析效率挺高，不过我们需要熟悉它的一些规则语法才能使用
+
+![xpath](G:\Code\key\.ssh\notes\mdfile\python\wsnotes\xpath.jpg)
+
+- 例子：
+
+```
+from lxml import etree
+import lxml.html
+
+content = doc.xpath("//table[@class='olt']/tr/td/a") 
+```
+
+
+
 # 模块
 
 ## requests
@@ -178,7 +244,7 @@ print response.read()
 
 ### urllib.parse url 负责解析编码
 
-按照标准， URL 只允许一部分ASCII字符（数字字母和部分符号），其他的字符（如汉字）是不符合 URL 标准的。
+按照标准， URL 只允许一部分ASCII字符（数字字母和部分符号），其他的字符（如汉字）是不符合 URL 标准的。当网址中含有中文是，需要把网址转换为%xx的形式
 所以 URL 中使用其他字符就需要进行 URL 编码
 
 #### 转换字符串
@@ -479,87 +545,3 @@ Python3的字符串的编码语言用的是unicode编码，由于Python的字符
 c = str(b'\xe4\xbd\xa0\xe5\xa5\xbd', "UTF-8")
 # 结果： 你好
 ```
-
-
-
-------
-
-# 网址编码
-
-当网址中含有中文是，需要把网址转换为%xx的形式
-
-### 1.转换字符串
-
-- 功能：将单个字符串编码转化为%xx的形式
-- 导入：from urllib.parse import quote
-
-- 例子：
-
-```
-from urllib.parse import quote
-
-# 特殊符号：汉子、&、=等特殊符号编码为%xx
-KEYWORD = '苹果'
-url = 'https://taobao.com/search?q=' +quote(KEYWORD)
-print(url)
-# 结果为：https://taobao.com/search?q=%E8%8B%B9%E6%9E%9C
-KEYWORD = '='
-url = 'https://taobao.com/search?q=' + quote(KEYWORD)
-print(url)
-# 运行结果：https://taobao.com/search?q=%3D
-
-
-# url标准符号：数字字母
-KEYWORD = 'ipad'
-url = 'https://taobao.com/search?q=' + quote(KEYWORD)
-print(url)
-# 运行结果：https://taobao.com/search?q=ipad
-KEYWORD = '3346778'
-url = 'https://taobao.com/search?q=' + quote(KEYWORD)
-print(url)
-# 运行结果：https://taobao.com/search?q=3346778
-```
-
-### 2.转换字典
-
-- 功能：将存入的字典参数编码为URL查询字符串，即转换成以key1=value1&key2=value2的形式
-- 导入：from urllib.parse import urlencode
-- 例子：
-
-```
-from urllib.parse import urlencode
-base_url = 'https://m.weibo.cn/api/container/getIndex?'
-
-# url标准符号：数字字母
-params1 = {
-            "value":"english",
-            'page':1
-        }
-url1 = base_url + urlencode(params1)
-print(urlencode(params1))
-print(url1)
-# 运行结果
-#value=english&page=1
-#https://m.weibo.cn/api/container/getIndex?value=english&page=1
-
-# 特殊符号：汉字,/,&,=,URL编码转化为%xx的形式
-params2 = {
-            'name':"王二",
-            'extra':"/",
-            'special':'&',
-            'equal':'='
-        }
-url2 = base_url + urlencode(params2)
-print(urlencode(params2))
-print(url2)
-# 运行结果
-#name=%E7%8E%8B%E4%BA%8C&extra=%2F&special=%26&equal=%3D
-#https://m.weibo.cn/api/container/getIndex?name=%E7%8E%8B%E4%BA%8C&extra=%2F&special=%26&equal=%3D
-
-print(type(urlencode(params2)))
-print(type(url2))
-# 运行结果
-#<class 'str'>
-#<class 'str'>
-```
-
