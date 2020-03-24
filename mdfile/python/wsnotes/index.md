@@ -1,3 +1,17 @@
+<head>
+  <script type="text/javascript">
+  (function() {
+    var link = document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = '../../../h.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }());
+  </script>
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+
+
 # 步骤思路
 
 1. 明确目标 (要知道你准备在哪个范围或者网站去搜索)
@@ -546,3 +560,8 @@ Python3的字符串的编码语言用的是unicode编码，由于Python的字符
 c = str(b'\xe4\xbd\xa0\xe5\xa5\xbd', "UTF-8")
 # 结果： 你好
 ```
+
+
+<div id="toTop">
+  <a href="#" class="ryi-angle-up"></a>
+</div>
