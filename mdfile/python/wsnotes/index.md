@@ -11,6 +11,35 @@
   <link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 
+- [步骤思路](#步骤思路)
+- [解析页面](#解析页面)
+	- [正则表达式大法](#正则表达式大法)
+	- [requests-html](#requestshtml)
+	- [BeautifulSoup](#beautifulsoup)
+	- [lxml的XPath](#lxml的xpath)
+- [模块](#模块)
+	- [requests](#requests)
+	- [urllib](#urllib)
+		- [urllib.request 负责请求](#urllibrequest负责请求)
+			- [request()](#request)
+			- [urlopen()](#urlopen)
+			- [build_opener()](#buildopener)
+		- [urllib.error 异常处理模块](#urlliberror异常处理模块)
+		- [urllib.parse url 负责解析编码](#urllibparseurl负责解析编码)
+			- [转换字符串](#转换字符串)
+			- [转换字典](#转换字典)
+		- [urllib.robotparser 负责解析robots.txt](#urllibrobotparser负责解析robotstxt)
+	- [Beautiful Soup](#beautifulsoup)
+- [Selenium](#selenium)
+	- [元素定位](#元素定位)
+		- [定位方法](#定位方法)
+		- [区别](#区别)
+	- [判断元素存在](#判断元素存在)
+- [转码](#转码)
+
+&nbsp;
+&nbsp;
+&nbsp;
 
 # 步骤思路
 
@@ -18,6 +47,7 @@
 2. 爬 (将所有的网站的内容全部爬下来)
 3. 取 (去掉对我们没用处的数据)
 4. 处理数据（按照我们想要的方式存储和使用）
+&nbsp;
 
 内容一般分为两部分，**非结构化数据**和**结构化数据**。
 
