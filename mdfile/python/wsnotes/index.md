@@ -138,7 +138,7 @@ img = pic_bf.find_all('a')
 
 lxml这个库同时 支持HTML和XML的解析，支持XPath解析方式，解析效率挺高，不过我们需要熟悉它的一些规则语法才能使用
 
-![xpath](G:\Code\key\.ssh\notes\mdfile\python\wsnotes\xpath.jpg)
+![img](xpath.jpg)
 
 - 例子：
 
