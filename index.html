@@ -3,6 +3,19 @@
     <title>主页</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="h.ico" />	
+    <script type="text/javascript" src="html2canvas.min.js"></script>
+    <script type="text/javascript">
+        function takeScreenshot() {
+			console.log('test');
+			html2canvas(document.body, {
+			    onrendered: function(canvas) {
+			      document.body.appendChild(canvas);
+			    },
+		   // width: 300,
+		   // height: 300
+		  	});
+		}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 <body>
@@ -38,7 +51,9 @@
 			</div>
 		</div>
 
-		
+		<div id="view">
+		    <input type="button" value="截图" onclick="takeScreenshot()">
+		</div>
 	</div>
 	<A target="_blank" HREF="https://notes.afkid.fun/css/" class="linenone">.</A>
 </body>
