@@ -20,6 +20,10 @@
     - [5.使用闭包的注意点](#使用闭包的注意点)
     - [6.例子](#例子)
 - [JS导入icon](#js导入icon)
+- [Cookie](#cookie)
+    - [路径](#路径)
+    - [查看、修改](#查看、修改)
+    - [查看网站cookie快捷方式](#查看网站cookie快捷方式)
 
 ## 闭包
 #### 变量的作用域
@@ -171,3 +175,68 @@ alert(object.getNameFunc()());   //My Object
 <div id="toTop">
   <a href="#" class="ryi-angle-up"></a>
 </div>
+
+
+
+## Cookie
+
+#### 路径
+
+1. **IE浏览器Cookie数据位于**：
+
+   ```
+   %APPDATA%\Microsoft\Windows\Cookies\ 目录中的xxx.txt文件 （里面可能有很多个.txt Cookie文件）
+   如: C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Cookies\administrator@live.letv.txt
+   ```
+
+2. **Firefox的Cookie数据位于**：
+
+   ```
+   %APPDATA%\Mozilla\Firefox\Profiles\ 目录中的xxx.default目录，名为cookies.sqlite的文件。
+   如：C:\Users\Administrator\AppData\Roaming\Mozilla\Firefox\Profiles\ji4grfex.default\cookies.sqlite
+   在Firefox中查看cookie, 可以选择”工具 > 选项 >” “隐私 > 移除单个Cookie”。
+   ```
+
+3. **Chrome的Cookie数据位于**：
+
+   ```
+   %LOCALAPPDATA%\Google\Chrome\User Data\Default\ 目录中，名为Cookies的文件。
+   如：C:\Users\Administrator\AppData\Local\Google\Chrome\User Data\Default\Cookies
+   ```
+
+P.S. sqlite文件可以使用软件SQLiteManager打开
+
+#### 查看、修改
+
+使用开发者工具查看cookie
+
+<img src="01.jpg" alt="01" style="zoom:80%;" />
+
+双击空白处即刻新增cookie，自定义名称、对应的值、所属网址域名、域名下具体地址、到期时间
+
+<img src="02.jpg" alt="01" style="zoom:80%;" />
+
+点击想要修改的cookie，在需要修改的cookie的某一具体属性处，双击即可修改
+
+<img src="03.jpg" alt="01" style="zoom:80%;" />
+
+
+
+#### 查看网站cookie快捷方式
+
+1. 地址栏运行js代码
+
+   在浏览器地址栏输入：`javascript:alert(document.cookie)`，按回车会弹出当前网页登录的cookie信息
+
+2. 开发者工具控制台
+
+   调出开发者工具 --- console --- 输入: document.cookie --- 回车即刻
+
+   <img src="04.jpg" alt="01" style="zoom:80%;" />
+
+3. 可复制的cookie信息
+
+   在浏览器地址栏输入：`javascript:prompt("cookie",document.cookie)`，按回车会弹出当前网页登录的cookie信息
+
+   <img src="05.jpg" alt="01" style="zoom:80%;" />
+
