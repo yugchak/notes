@@ -19,6 +19,12 @@
 - [响应式网页](#响应式网页)
 	- [CSS的@media规则](#CSS的@media规则)
 	- [选择加载CSS](#选择加载CSS)
+- [编码](#编码)
+  - [GBK](#gbk)
+  - [GB18030](#gn18030)
+  - [GB2312](#gb2312)
+  - [UTF(UCS Transfer Format)](#utfucs-transfer-format)
+  - [Unicode](#unicode)
 
 
 
@@ -189,3 +195,22 @@ GB18030支持少数民族的汉字，也包含了繁体汉字和日韩汉字。
 #### UTF(UCS Transfer Format)
 
 UTF是在互联网上使用最广的一种Unicode的实现方式。我们最常用的是UTF-8，表示每次8个位传输数据，除此之外还有UTF-16。
+
+- 例子：UTF-8显示 “你好中国！hello，123”
+
+```
+&#x4F60;&#x597D;&#x4E2D;&#x56FD;&#xFF01;hello&#xFF0C;123
+```
+
+#### Unicode
+
+准确来说，Unicode不是编码格式，而是字符集。这个字符集包含了世界上目前所有的符号。
+
+另外，原来有些字符可以用一个字节即8位来表示的，Unicode将所有字符的长度统一为16位，因此字符是定长的。
+
+- 例子：Unicode显示 “你好中国！hello，123”
+
+```
+\u4f60\u597d\u4e2d\u56fd\uff01\u0068\u0065\u006c\u006c\u006f\uff0c\u0031\u0032\u0033
+```
+
