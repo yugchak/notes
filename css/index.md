@@ -20,14 +20,16 @@
 - 超时空要塞  <a href="https://www.bilibili.com/bangumi/media/md1187/">Macross</a>  <a href="https://www.bilibili.com/bangumi/media/md3530/">Δ</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md5526">超自然九人组</a>  
 - 刺客五六七  <a href="https://www.bilibili.com/bangumi/media/md6360/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md28222513/">第二季(会员)</a>  
+- <a href="https://www.bilibili.com/bangumi/media/md130412/">刀剑神域UW篇(会员)</a> <a href="https://www.bilibili.com/bangumi/media/md28222723">第二季(会员) </a> <a href="https://www.bilibili.com/bangumi/media/md28228119">第三季(会员) </a> 
 - 地狱少女  <a href="https://www.bilibili.com/bangumi/media/md28220983">第二季 -- 二笼(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220469">第三季 -- 三鼎(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md6341/">第四季 -- 宵伽</a>  
 - 关于完全听不懂老公在说什么的事  <a href="https://www.bilibili.com/bangumi/media/md1530/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1655">第二季</a>  
 - 攻壳机动队  <a href="https://www.bilibili.com/bangumi/media/md1564">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1565">第二季</a>  <a href="https://www.bilibili.com/bangumi/media/md1568">ARISE TV</a>  <a href="https://www.bilibili.com/bangumi/media/md5180">ARISE剧场版</a>  <a href="https://www.bilibili.com/bangumi/media/md1566">SAC剧场版</a>  
+- <a href="https://www.bilibili.com/bangumi/media/md4314622">汉化日记(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md2601">黑街</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md1102/">黑神</a>  
 - 黑之契约者  <a href="https://www.bilibili.com/bangumi/media/md1064/">第一季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md1065">第二季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md1066/">外传(会员)</a>  
-- <a href="https://www.bilibili.com/bangumi/media/md4314622">汉化日记(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md6339/">欢迎来到实力至上主义的教室(会员)</a>  
+- 辉夜大小姐想让我告白 <a href="https://www.bilibili.com/bangumi/media/md5267730/">第一季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28228367">第二季(会员)</a>  
 - jojo  <a href="https://www.bilibili.com/bangumi/media/md28223479">第一季&第二季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223481">第三季上(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223483">第三季下(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md140552">第四季(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md135652">第五季(会员)</a>  
 - 交响诗篇  <a href="https://www.bilibili.com/bangumi/media/md790/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md791">第二季</a>  
 - 狼与香辛料  <a href="https://www.bilibili.com/bangumi/media/md1071/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1072">第二季</a>  
@@ -37,13 +39,13 @@
 - <a href="https://www.bilibili.com/bangumi/media/md444/">魔王勇者(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md2539/">魔法少女小圆</a>  <a href="https://www.bilibili.com/bangumi/media/md28220103">剧场版1(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220104">剧场版2(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220105">剧场版3(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28223817">外传(会员)</a>  
 - overload  <a href="https://www.bilibili.com/bangumi/media/md2576">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md8792">第二季</a>  <a href="https://www.bilibili.com/bangumi/media/md102252">第三季</a>  <a href="https://www.bilibili.com/bangumi/media/md91972">剧场版1</a>  <a href="https://www.bilibili.com/bangumi/media/md113152">剧场版2</a>  
+- <a href="https://www.bilibili.com/bangumi/media/md3461/">RE：从零开始的异世界生活(会员)</a>  
 - RWBY  <a href="https://www.bilibili.com/bangumi/media/md333/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md334">第二季</a>  <a href="https://www.bilibili.com/bangumi/media/md2894">第三季</a>  <a href="https://www.bilibili.com/bangumi/media/md5636">第四季</a>  <a href="https://www.bilibili.com/bangumi/media/md7552">第五季</a>  <a href="https://www.bilibili.com/bangumi/media/md2430940">第六季</a>  
 - 血界战线  <a href="https://www.bilibili.com/bangumi/media/md1553/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md6439/">第二季</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md3339/">夏娃的时间</a>  <a href="https://www.bilibili.com/bangumi/media/md2004">剧场版</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md1359/">永生之酒</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md28221335/">炎炎消防队(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md2659/">植木的法则</a>  
-- <a href="https://www.bilibili.com/bangumi/media/md28222736/">这个勇者明明超强却过分慎重(会员)</a>  
 
 一月新番：
 
@@ -52,6 +54,15 @@
 - <a href="http://www.yhdm.tv/show/4760.html">达尔文游戏(其他)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md28223860/">理科生坠入情网故尝试证明(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md28224095/">超科学电磁炮T(会员)</a>  
+- <a href="https://www.bilibili.com/bangumi/media/md28222736/">这个勇者明明超强却过分慎重(会员)</a>  
+
+
+
+四月新番：
+
+- 我的青春恋爱物语果然有问题 <a href="https://www.bilibili.com/bangumi/media/md28228386/">第三季(会员) 延期</a> 
+- <a href="https://www.bilibili.com/bangumi/media/md28228266/">BNA(会员)</a>  
+- <a href="https://www.bilibili.com/bangumi/media/md28228355/">神之塔</a>  
 
 ------
 
@@ -88,6 +99,8 @@
 - blood+
 - 死亡代理人
 - 危险代理人
+- 被束缚的芬尼尔
+- 异兽魔都
 
 
 
