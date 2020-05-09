@@ -14,7 +14,7 @@
 ## B站资源
 
 - <a href="https://www.bilibili.com/bangumi/media/md2680/">男高日常</a>  
-- <a href="https://www.bilibili.com/bangumi/play/ss289/">记录的地平线</a>  
+- <del><a href="https://www.bilibili.com/bangumi/play/ss289/">记录的地平线</a></del>
 - <a href="https://www.bilibili.com/bangumi/media/md102312/">碧蓝之海(会员)</a>  
 - 白色相簿  <a href="https://www.bilibili.com/bangumi/media/md1078">上半篇(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220987">下半篇(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md3516/">第二季</a>  
 - 超时空要塞  <a href="https://www.bilibili.com/bangumi/media/md1187/">Macross</a>  <a href="https://www.bilibili.com/bangumi/media/md3530/">Δ</a>  
