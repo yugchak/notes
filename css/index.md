@@ -22,7 +22,7 @@
 - 刺客五六七  <a href="https://www.bilibili.com/bangumi/media/md6360/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md28222513/">第二季(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md130412/">刀剑神域UW篇(会员)</a> <a href="https://www.bilibili.com/bangumi/media/md28222723">第二季(会员) </a> <a href="https://www.bilibili.com/bangumi/media/md28228119">第三季(会员) </a> 
 - 地狱少女  <a href="https://www.bilibili.com/bangumi/media/md28220983">第二季 -- 二笼(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md28220469">第三季 -- 三鼎(会员)</a>  <a href="https://www.bilibili.com/bangumi/media/md6341/">第四季 -- 宵伽</a>  
-- 关于完全听不懂老公在说什么的事  <a href="https://www.bilibili.com/bangumi/media/md1530/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1655">第二季</a>  
+- <del>关于完全听不懂老公在说什么的事  <a href="https://www.bilibili.com/bangumi/media/md1530/">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1655">第二季</a>  </del>
 - 攻壳机动队  <a href="https://www.bilibili.com/bangumi/media/md1564">第一季</a>  <a href="https://www.bilibili.com/bangumi/media/md1565">第二季</a>  <a href="https://www.bilibili.com/bangumi/media/md1568">ARISE TV</a>  <a href="https://www.bilibili.com/bangumi/media/md5180">ARISE剧场版</a>  <a href="https://www.bilibili.com/bangumi/media/md1566">SAC剧场版</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md4314622">汉化日记(会员)</a>  
 - <a href="https://www.bilibili.com/bangumi/media/md2601">黑街</a>  
